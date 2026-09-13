@@ -46,10 +46,10 @@ shadow_enabled = true
 [node name="House" parent="." unique_id=564913597 instance=ExtResource("1_f3sb7")]
 
 [node name="Player" parent="." unique_id=1758276386 instance=ExtResource("2_fj7yv")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.00013053417, 1.5978707, 0.00028973818)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.06497395, 1.5978707, -1.7412295)
 
 [node name="chest" parent="." unique_id=508502129 instance=ExtResource("4_aqk2v")]
-transform = Transform3D(0.19219361, 0, -0.1896355, 0, 0.27, 0, 0.1896355, 0, 0.19219361, 4.328622, 0.45490956, -4.302357)
+transform = Transform3D(-0.1649231, 0, -0.21377647, 0, 0.27, 0, 0.21377647, 0, -0.1649231, 5.0773134, 0.45490956, 2.907858)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1088725187]
 transform = Transform3D(-0.9899623, 0, -0.008639371, 0, 0.99, 0, 0.008639371, 0, -0.9899623, -0.7957269, 1.5415314, 3.8388681)
