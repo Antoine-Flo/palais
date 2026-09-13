@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://onl6u05anvei"]
 
+[ext_resource type="Script" uid="uid://bjlusxq1usdsw" path="res://world.gd" id="1_dwbse"]
 [ext_resource type="PackedScene" uid="uid://b2okmoduwi8jo" path="res://Environment/house.tscn" id="1_f3sb7"]
-[ext_resource type="PackedScene" uid="uid://dbwwakwh7d2r4" path="res://player.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://dbwwakwh7d2r4" path="res://Player/player.tscn" id="2_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://342jrk3qhqjt" path="res://Art/2D/piduf_barrel.png" id="3_tlwt5"]
 [ext_resource type="Texture2D" uid="uid://dbpafbh78yq50" path="res://Art/2D/perso_moi_BG3_test_couleur_aplatit_mais.png" id="4_036b0"]
 [ext_resource type="PackedScene" uid="uid://dyqqcnq4o6str" path="res://Art/3D/Chest/chest.tscn" id="4_aqk2v"]
@@ -34,7 +35,20 @@ albedo_texture = ExtResource("3_tlwt5")
 material = SubResource("StandardMaterial3D_036b0")
 size = Vector2(3.83, 3.82)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkg7o"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.2451, 0.43, 0.24818167, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
 [node name="World" type="Node3D" unique_id=2123828115]
+script = ExtResource("1_dwbse")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1228697131]
 environment = SubResource("Environment_aqk2v")
@@ -58,3 +72,37 @@ mesh = SubResource("QuadMesh_4mkqk")
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1368368385]
 transform = Transform3D(-0.314988, 0, -0.0027488905, 0, 0.315, 0, 0.0027488905, 0, -0.314988, 1.8206131, 1.4750594, 3.8431115)
 mesh = SubResource("QuadMesh_dwbse")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2101131217]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=851287743]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=577930721]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pkg7o")
+
+[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=1914167927]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Bienvenue dans le temple Game Bis !"
