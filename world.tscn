@@ -3,16 +3,16 @@
 [ext_resource type="Script" uid="uid://bjlusxq1usdsw" path="res://world.gd" id="1_dwbse"]
 [ext_resource type="PackedScene" uid="uid://b2okmoduwi8jo" path="res://Environment/house.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://dbwwakwh7d2r4" path="res://Player/player.tscn" id="2_fj7yv"]
+[ext_resource type="Texture2D" uid="uid://bo68xw27exdyk" path="res://sky_96_2k.png" id="2_pkg7o"]
 [ext_resource type="Texture2D" uid="uid://342jrk3qhqjt" path="res://Art/2D/piduf_barrel.png" id="3_tlwt5"]
 [ext_resource type="Texture2D" uid="uid://dbpafbh78yq50" path="res://Art/2D/perso_moi_BG3_test_couleur_aplatit_mais.png" id="4_036b0"]
 [ext_resource type="PackedScene" uid="uid://dyqqcnq4o6str" path="res://Art/3D/Chest/chest.tscn" id="4_aqk2v"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_dwbse"]
+panorama = ExtResource("2_pkg7o")
 
 [sub_resource type="Sky" id="Sky_tlwt5"]
-sky_material = SubResource("ProceduralSkyMaterial_fj7yv")
+sky_material = SubResource("PanoramaSkyMaterial_dwbse")
 
 [sub_resource type="Environment" id="Environment_aqk2v"]
 background_mode = 2
@@ -63,7 +63,7 @@ shadow_enabled = true
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.06497395, 1.5978707, -1.7412295)
 
 [node name="chest" parent="." unique_id=508502129 instance=ExtResource("4_aqk2v")]
-transform = Transform3D(-0.1649231, 0, -0.21377647, 0, 0.27, 0, 0.21377647, 0, -0.1649231, 5.0773134, 0.45490956, 2.907858)
+transform = Transform3D(0.22225598, 0, -0.15330458, 0, 0.27000004, 0, 0.15330458, 0, 0.22225598, 4.260993, 0.45490956, -3.1101313)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1088725187]
 transform = Transform3D(-0.9899623, 0, -0.008639371, 0, 0.99, 0, 0.008639371, 0, -0.9899623, -0.7957269, 1.5415314, 3.8388681)
