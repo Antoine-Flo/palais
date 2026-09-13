@@ -37,9 +37,12 @@ jobs:
           mv templates/* ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
 
       - name: Install Blender
+        env:
+          BLENDER_VERSION: 4.2.9
         run: |
-          sudo apt-get update
-          sudo apt-get install -y blender
+          curl -L -o blender.tar.xz "https://download.blender.org/release/Blender4.2/blender-${BLENDER_VERSION}-linux-x64.tar.xz"
+          mkdir -p ~/blender
+          tar -xf blender.tar.xz -C ~/blender --strip-components=1
 
       - name: Configure Blender path for headless import
         run: |
@@ -48,7 +51,7 @@ jobs:
           [gd_resource type="EditorSettings" format=3]
 
           [resource]
-          filesystem/import/blender/blender_path = "$(which blender)"
+          filesystem/import/blender/blender_path = "$HOME/blender/blender"
           EOF
 
       - name: Import project resources
