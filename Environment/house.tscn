@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b2okmoduwi8jo"]
+
+[ext_resource type="PackedScene" uid="uid://qwsrnfstbuyc" path="res://Environment/house.blend" id="1_hfkix"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hfkix"]
+points = PackedVector3Array(1.0158731, 0.11109869, 1.0158731, -1.0158731, -0.015873015, -1.0158731, -1.0158731, -0.015873015, 1.0158731, -1.0158731, 0.11109869, -1.0158731, 1.0158731, -0.015873015, -1.0158731, -1.0158731, 0.11109869, 1.0158731, 1.0158731, -0.015873015, 1.0158731, 1.0158731, 0.11109869, -1.0158731)
+
+[node name="house" unique_id=564913597 instance=ExtResource("1_hfkix")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" parent_id_path=PackedInt32Array(24942549) index="0" unique_id=1678379633]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0" unique_id=766549736]
+shape = SubResource("ConvexPolygonShape3D_hfkix")

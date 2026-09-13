@@ -5,3 +5,20 @@
 # Blender automatic backup files
 *.blend1
 *.blend2
+
+# CI build output
+/build/
+
+# Local manual web export artifacts
+/palais.html
+/palais.js
+/palais.pck
+/palais.wasm
+/palais.png
+/palais.icon.png
+/palais.apple-touch-icon.png
+/palais.audio.worklet.js
+/palais.audio.position.worklet.js
+/palais.png.import
+/palais.icon.png.import
+/palais.apple-touch-icon.png.import
