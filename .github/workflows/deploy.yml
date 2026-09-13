@@ -38,9 +38,9 @@ jobs:
 
       - name: Install Blender
         env:
-          BLENDER_VERSION: 4.2.9
+          BLENDER_VERSION: 5.1.2
         run: |
-          curl -L -o blender.tar.xz "https://download.blender.org/release/Blender4.2/blender-${BLENDER_VERSION}-linux-x64.tar.xz"
+          curl -L -o blender.tar.xz "https://download.blender.org/release/Blender5.1/blender-${BLENDER_VERSION}-linux-x64.tar.xz"
           mkdir -p ~/blender
           tar -xf blender.tar.xz -C ~/blender --strip-components=1
 
