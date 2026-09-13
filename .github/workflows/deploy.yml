@@ -12,11 +12,11 @@ jobs:
   export-and-publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Cache Godot export templates
         id: cache-templates
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
           key: godot-templates-${{ env.GODOT_VERSION }}
@@ -38,9 +38,9 @@ jobs:
 
       - name: Install Blender
         env:
-          BLENDER_VERSION: 5.1.2
+          BLENDER_VERSION: 5.2.1
         run: |
-          curl -L -o blender.tar.xz "https://download.blender.org/release/Blender5.1/blender-${BLENDER_VERSION}-linux-x64.tar.xz"
+          curl -L -o blender.tar.xz "https://download.blender.org/release/Blender5.2/blender-${BLENDER_VERSION}-linux-x64.tar.xz"
           mkdir -p ~/blender
           tar -xf blender.tar.xz -C ~/blender --strip-components=1
 
